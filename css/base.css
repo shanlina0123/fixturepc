@@ -165,3 +165,13 @@ a:focus {
 .Validform_error i {
   vertical-align: middle;
 }
+.forLineheight {
+  line-height: 38px;
+}
+.forLineheight input {
+  display: inline-block;
+  width: 80px;
+  padding: 0 10px;
+  margin-right: 5px;
+  border: 1px solid #eee;
+}
