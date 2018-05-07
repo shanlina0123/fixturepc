@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>系统设置</title>
+    <link rel="icon" href="../../images/icon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <!--顶部导航-->
+        <div class="layui-header" id="header"></div>
+        <!--左侧导航-->
+        <div class="layui-side layui-bg-black" id="left"></div>
+        <div class="layui-body">
+            <div class="main">
+                <h1 class="pageTitle">房型列表</h1>
+                <div class="settingPop">
+                    <div class="setttingPopInner">
+                        <table class="layui-table popSettingTable">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>值</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="text" class="layui-input" name="settingName" value="一室一厅" readonly></td>
+                                <td>
+                                    <div class="settingBtns">
+                                        <button class="layui-btn layui-btn-sm popEditBtn" onclick="edit(this)"><i class="layui-icon"></i></button>
+                                        <button class="layui-btn layui-btn-sm popDelateBtn" onclick="deleteItem(this)"><i class="layui-icon"></i></button>
+                                    </div>
+                                    <div class="settingBtn" style="display: none">
+                                        <button class="layui-btn layui-btn-sm saveBtn" onclick="save(this)">保存</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="addBtnWrap">
+                        <button class="layui-btn addBtn"><i class="layui-icon"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    layui.use('form', function() {
+        var form = layui.form,
+            $ = layui.jquery;
+        //添加一行数据
+        $(".addBtn").click(function() {
+            var tsble = $(".popSettingTable");
+            var addTr = $("<tr>" +
+                "<td>2</td>" +
+                "<td><input type='text' class='layui-input' name='settingName'></td>" +
+                "<td><div class='settingBtns' style='display: none'><button class='layui-btn layui-btn-sm popEditBtn' onclick='edit(this)'>" +
+                "<i class='layui-icon'></i></button><button class='layui-btn layui-btn-sm popDelateBtn' onclick='deleteItem(this)'><i class='layui-icon'></i></button></div>" +
+                "<div class='settingBtn'><button class='layui-btn layui-btn-sm popSaveBtn' onclick='save(this)'>保存</button></div></td>" +
+                "</tr>");
+            addTr.appendTo(tsble);
+        });
+    });
+    //编辑信息方法
+    function edit(index) {
+        $(index).parents("td").siblings().children(".layui-input").removeAttr("readOnly");
+        $(index).parents(".settingBtns").hide().siblings(".settingBtn").show();
+    }
+    //保存信息方法
+    function save(index) {
+        $(index).parents("td").siblings().children(".layui-input").attr('readonly', 'readonly');
+        $(index).parents(".settingBtn").hide().siblings(".settingBtns").show();
+    }
+    //删除信息
+    function deleteItem(index) {
+        layer.confirm('确定要删除吗？', {
+            btn: ['确定', '取消']
+        }, function() {
+            $(index).parents("tr").remove();
+            layer.msg('删除成功', {
+                icon: 1
+            });
+        });
+    }
+</script>
+
+</html>

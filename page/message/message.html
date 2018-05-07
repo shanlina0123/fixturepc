@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>资料设置</title>
+    <link rel="icon" href="../../images/icon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/login.css">
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <!--顶部导航-->
+        <div class="layui-header" id="header"></div>
+        <!--左侧导航-->
+        <div class="layui-side layui-bg-black" id="left"></div>
+        <div class="layui-body">
+            <div class="main">
+                <h1 class="pageTitle">填写资料</h1>
+                <div class="fullForm">
+                    <div class="fullFormInner">
+                        <form class="layui-form">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label"><i class="layui-icon" style="font-size: 12px; color: #FF5722;">*</i>公司全称</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="companyName" lay-verify="companyName" autocomplete="off" placeholder="请输入公司名称" class="layui-input">
+                                </div>
+                                <div class="Validform_checktip"><i class="layui-icon" style=" color: #FF5722">&#x1007;</i>此项必填</div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label"><i class="layui-icon" style="font-size: 12px; color: #FF5722;">*</i>公司简称</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="sName" lay-verify="sName" autocomplete="off" placeholder="请输入公司简称" class="layui-input">
+                                </div>
+                                <div class="Validform_checktip"><i class="layui-icon" style=" color: #FF5722">&#x1007;</i>此项必填</div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label"><i class="layui-icon" style="font-size: 12px; color: #FF5722;">*</i>APPID</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="sName" lay-verify="sName" autocomplete="off" placeholder="公司小程序APPID" class="layui-input">
+                                </div>
+                                <div class="Validform_checktip"><i class="layui-icon" style=" color: #FF5722">&#x1007;</i>此项必填</div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label"><i class="layui-icon" style="font-size: 12px; color: #FF5722;">*</i>公司地址</label>
+                                <div class="layui-input-inline">
+                                    <select name="quiz1">
+                                        <option value="">请选择省</option>
+                                        <option value="浙江" selected="">浙江省</option>
+                                        <option value="你的工号">江西省</option>
+                                        <option value="你最喜欢的老师">福建省</option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline">
+                                    <select name="quiz2">
+                                        <option value="">请选择市</option>
+                                        <option value="杭州">杭州</option>
+                                        <option value="宁波" disabled="">宁波</option>
+                                        <option value="温州">温州</option>
+                                        <option value="温州">台州</option>
+                                        <option value="温州">绍兴</option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline">
+                                    <select name="quiz3">
+                                        <option value="">请选择县/区</option>
+                                        <option value="西湖区">西湖区</option>
+                                        <option value="余杭区">余杭区</option>
+                                        <option value="拱墅区">临安市</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label"><i class="layui-icon" style="font-size: 12px; color: #FF5722;">*</i>详细地址</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="addr" lay-verify="addr" autocomplete="off" placeholder="请输入公司详细地址" class="layui-input">
+                                </div>
+                                <div class="Validform_checktip"><i class="layui-icon" style=" color: #FF5722">&#x1007;</i>此项必填</div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label"><i class="layui-icon" style="font-size: 12px; color: #FF5722;">*</i>公司简介</label>
+                                <div class="layui-input-block">
+                                    <textarea placeholder="公司简介" class="layui-textarea"></textarea>
+                                </div>
+                                <div class="Validform_checktip"><i class="layui-icon" style=" color: #FF5722">&#x1007;</i>此项必填</div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label"><i class="layui-icon" style="font-size: 12px; color: #FF5722;">*</i>公司电话</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="conpanyPhone" lay-verify="conpanyPhone" autocomplete="off" placeholder="请输入公司电话" class="layui-input">
+                                </div>
+                                <div class="Validform_checktip"><i class="layui-icon" style=" color: #FF5722">&#x1007;</i>此项必填</div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label"><i class="layui-icon" style="font-size: 12px; color: #FF5722;">*</i>公司LOGO</label>
+                                <div class="layui-upload-drag fl" id="test10">
+                                    <i class="layui-icon"></i>
+                                    <p>点击上传公司LOGO，或者拖拽到此处</p>
+                                </div>
+                                <div class="uploadImg layui-inline fl"></div>
+                                <div class="Validform_checktip"><i class="layui-icon" style=" color: #FF5722">&#x1007;</i>此项必填</div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">插件链接</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="conpanyPhone" lay-verify="conpanyPhone" autocomplete="off" value="www.baidu.com" class="layui-input" readonly>
+                                </div>
+                            </div>
+                            <div class="submitButWrap">
+                                <button type="button" class="layui-btn">立即提交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--二维码弹窗-->
+    <div class="erweimaPop">
+        <div class="erweima"></div>
+        <p>扫描二维码认证您的身份</p>
+    </div>
+</body>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    layui.use(['upload', 'layer', 'jquery', 'form'], function() {
+        var form = layui.form,
+            upload = layui.upload,
+            layer = layui.layer,
+            $ = layui.jquery;
+        upload.render({
+            elem: '#test10',
+            url: '/upload/',
+            done: function(res) {
+                //console.log(res)
+            }
+        });
+        //扫二维码弹窗
+        // layer.open({
+        //     type: 1,
+        //     title: '身份授权',
+        //     shadeClose: true,
+        //     scrollbar: false,
+        //     skin: 'layui-layer-rim',
+        //     area: ['600px', '400px'],
+        //     content: $(".erweimaPop")
+        // })
+    })
+</script>
+<script>
+</script>
+
+</html>

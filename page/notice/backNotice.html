@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>回复咨询消息</title>
+    <link rel="icon" href="../../images/icon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <!--顶部导航-->
+        <div class="layui-header" id="header"></div>
+        <!--左侧导航-->
+        <div class="layui-side layui-bg-black" id="left"></div>
+        <div class="layui-body">
+            <div class="main">
+                <div class="noticeWrap">
+                    <form class="layui-form">
+                        <div class="layui-form-item">
+                            <div style="font-size: 14px; padding-bottom:10px;">给<span>用户昵称</span>回复消息：</div>
+                            <textarea class="layui-textarea"></textarea>
+                        </div>
+                        <button type="button" class="layui-btn">回复</button>
+                    </form>
+                    <ul class="hisMsgUl">
+                        <li class="clearfix">
+                            <div class="userLogo fl"><img src="../../images/default.png"></div>
+                            <div class="rightMsg fl">
+                                <div>我：<span>没有啦</span></div>
+                                <p>2018-07-08 11:45:45</p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="userLogo fl"><img src="../../images/default.png"></div>
+                            <div class="rightMsg fl">
+                                <div>用户昵称：<span>请问599的装修是真的吗？还会有其他的增项吗？</span></div>
+                                <p>2018-07-08 10:45:45</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--新增门店弹窗-->
+    <div class="addWrap popWrap">
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="font-size: 14px;">姓名</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="font-size: 14px;">角色</label>
+                <div class="layui-input-inline">
+                    <select name="modules" lay-verify="required" lay-search="">
+                        <option value="1">管理员</option>
+                        <option value="2">门店管理员</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="font-size: 14px;">账户</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="font-size: 14px;">门店</label>
+                <div class="layui-input-inline">
+                    <select name="modules" lay-verify="required" lay-search="">
+                        <option value="1">高新店</option>
+                        <option value="2">曲江店</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="font-size: 14px;">状态</label>
+                <div class="layui-input-inline">
+                    <select name="modules" lay-verify="required" lay-search="">
+                        <option value="1">启用</option>
+                        <option value="2">锁定</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item popSubmitBtn">
+                <button type="button" class="layui-btn loginButton">立即提交</button>
+            </div>
+        </form>
+    </div>
+    <!--编辑门店弹窗-->
+    <div class="editWrap popWrap">
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="font-size: 14px;">姓名</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" value="张三">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="font-size: 14px;">角色</label>
+                <div class="layui-input-inline">
+                    <select name="modules" lay-verify="required" lay-search="">
+                        <option value="1">管理员</option>
+                        <option value="2">门店管理员</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="font-size: 14px;">账户</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" value="zhangs">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="font-size: 14px;">门店</label>
+                <div class="layui-input-inline">
+                    <select name="modules" lay-verify="required" lay-search="">
+                        <option value="1">高新店</option>
+                        <option value="2">曲江店</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="font-size: 14px;">状态</label>
+                <div class="layui-input-inline">
+                    <select name="modules" lay-verify="required" lay-search="">
+                        <option value="1">启用</option>
+                        <option value="2">锁定</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item popSubmitBtn">
+                <button type="button" class="layui-btn loginButton">立即提交</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    layui.use(['form', 'layer', 'jquery'], function() {
+        var form = layui.form,
+            layer = layui.layer,
+            $ = layui.jquery;
+        //删除门店
+        $(".deleteBtn").click(function() {
+            var me = $(this);
+            layer.confirm('确定要删除吗？', {
+                btn: ['确定', '取消']
+            }, function() {
+                me.parents("tr").remove();
+                layer.msg('删除成功', {
+                    icon: 1
+                });
+            });
+        });
+        //新增用户弹窗
+        $(".addBtn").click(function() {
+            layer.open({
+                type: 1,
+                title: '新增用户',
+                shadeClose: true,
+                scrollbar: false,
+                skin: 'layui-layer-rim',
+                area: ['600px', '500px'],
+                content: $(".addWrap")
+            })
+        });
+        //编辑用户弹窗
+        $(".editBtn").click(function() {
+            layer.open({
+                type: 1,
+                title: '编辑用户',
+                shadeClose: true,
+                scrollbar: false,
+                skin: 'layui-layer-rim',
+                area: ['600px', '500px'],
+                content: $(".editWrap")
+            })
+        });
+    });
+</script>
+
+</html>

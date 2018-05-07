@@ -1,0 +1,11 @@
+activity:活动管理
+client:客户管理
+notice:消息管理
+index:找回密码相关
+message:资料设置
+project:项目管理
+public:公用部分
+roles:角色管理
+store:门店管理
+system:系统属性
+users:用户

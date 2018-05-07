@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>抽奖客户列表</title>
+    <link rel="icon" href="../../images/icon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <!--顶部导航-->
+        <div class="layui-header" id="header"></div>
+        <!--左侧导航-->
+        <div class="layui-side layui-bg-black" id="left"></div>
+        <div class="layui-body">
+            <div class="main">
+                <!--新增和筛选部分-->
+                <div class="addBtnWrap">
+                    <button type="button" class="layui-btn">导出</button>
+                    <div class="topSort layui-inline">
+                        <form class="layui-form " action="">
+                            <div class="layui-inline">
+                                <label class="layui-form-label" style="font-size: 14px;">客户电话</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label" style="font-size: 14px;">是否中奖</label>
+                                <div class="layui-input-inline">
+                                    <select name="modules" lay-verify="required" lay-search="">
+                                        <option value="">全部</option>
+                                        <option value="1">是</option>
+                                        <option value="2">否</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label" style="font-size: 14px;">客户状态</label>
+                                <div class="layui-input-inline">
+                                    <select name="modules" lay-verify="required" lay-search="">
+                                        <option value="">全部</option>
+                                        <option value="1">未跟进</option>
+                                        <option value="2">跟进中</option>
+                                        <option value="2">已跟进</option>
+                                        <option value="2">失效</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="button" class="layui-btn searchBtn">查询</button>
+                        </form>
+                    </div>
+                </div>
+                <!--列表数据部分-->
+                <table class="layui-table">
+                    <thead>
+                        <tr>
+                            <th>编号</th>
+                            <th>客户姓名</th>
+                            <th>电话</th>
+                            <th>活动标题</th>
+                            <th>状态</th>
+                            <th>总抽奖次数</th>
+                            <th>剩余抽奖次数</th>
+                            <th>是否中奖</th>
+                            <th>门店</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>1</td>
+                        <td>张英俊</td>
+                        <td>15898798458</td>
+                        <td>五一大派送</td>
+                        <td>跟进中</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>是</td>
+                        <td>高新店</td>
+                        <td>
+                            <div class="layui-btn-group">
+                                <a href="luckDetail.html" class="layui-btn">查看</a>
+                                <button type="button" class="layui-btn editBtn">跟进</button>
+                                <button type="button" class="layui-btn deleteBtn">删除</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="pageWrap">这里是分页</div>
+            </div>
+        </div>
+    </div>
+    <!--客户跟进弹窗-->
+    <div class="clientPop">
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label">客户状态</label>
+                <div class="layui-input-block">
+                    <select name="modules" lay-verify="required" lay-search="">
+                                <option value="">全部</option>
+                                <option value="1">未跟进</option>
+                                <option value="2">跟进中</option>
+                                <option value="2">已跟进</option>
+                                <option value="2">失效</option>
+                            </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">跟进内容</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="describe"><button type="button" class="layui-btn ">立即提交</button></div>
+        </form>
+        <h2 class="logText">跟进日志</h2>
+        <ul class="logUl">
+            <li>
+                <div>客户状态：<span>无效</span></div>
+                <p class="backMsg">客户说她已经买过了。</p>
+                <div class="clearfix">
+                    <span class="fl">跟进人：张三</span>
+                    <span class="fr">跟进时间：2017-12-12</span>
+                </div>
+            </li>
+            <li>
+                <div>客户状态：<span>无效</span></div>
+                <p class="backMsg">客户说她已经买过了。</p>
+                <div class="clearfix">
+                    <span class="fl">跟进人：张三</span>
+                    <span class="fr">跟进时间：2017-12-12</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    layui.use(['form', 'layer', 'jquery'], function() {
+        var form = layui.form,
+            layer = layui.layer,
+            $ = layui.jquery;
+        //删除客户
+        $(".deleteBtn").click(function() {
+            var me = $(this);
+            layer.confirm('确定要删除吗？', {
+                btn: ['确定', '取消']
+            }, function() {
+                me.parents("tr").remove();
+                layer.msg('删除成功', {
+                    icon: 1
+                });
+            });
+        });
+        //编辑用户弹窗
+        $(".editBtn").click(function() {
+            layer.open({
+                type: 1,
+                title: '跟进客户',
+                shadeClose: true,
+                scrollbar: false,
+                skin: 'layui-layer-rim',
+                area: ['650px', '500px'],
+                content: $(".clientPop")
+            })
+        });
+    });
+</script>
+
+</html>

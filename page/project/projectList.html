@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>项目列表</title>
+    <link rel="icon" href="../../images/icon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <!--顶部导航-->
+        <div class="layui-header" id="header"></div>
+        <!--左侧导航-->
+        <div class="layui-side layui-bg-black" id="left"></div>
+        <div class="layui-body">
+            <div class="main">
+                <!--项目描述-->
+                <div class="projectWrap">
+                    当前项目数：<span>1</span>/<span>2</span>
+                    <a href="../users/userCenter.html">升级为无限项目>></a>
+                </div>
+                <!--新增和筛选部分-->
+                <div class="addBtnWrap">
+                    <a href="newProject.html" class="layui-btn addBtn">新建项目</a>
+                    <div class="topSort layui-inline">
+                        <form class="layui-form " action="">
+                            <div class="layui-inline">
+                                <label class="layui-form-label" style="font-size: 14px;">项目名称</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label" style="font-size: 14px;">门店</label>
+                                <div class="layui-input-inline">
+                                    <select name="modules" lay-verify="required" lay-search="">
+                                        <option value="">全部</option>
+                                        <option value="1">高新店</option>
+                                        <option value="2">曲江店</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label" style="font-size: 14px;">公开</label>
+                                <div class="layui-input-inline">
+                                    <select name="modules" lay-verify="required" lay-search="">
+                                        <option value="">全部</option>
+                                        <option value="1">是</option>
+                                        <option value="2">否</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="button" class="layui-btn searchBtn">查询</button>
+                        </form>
+                    </div>
+                </div>
+                <h1 class="pageTitle">活动列表</h1>
+                <!--列表数据部分-->
+                <form class="layui-form">
+                    <table class="layui-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>项目封面图</th>
+                                <th>项目名称</th>
+                                <th>阶段</th>
+                                <th>门店</th>
+                                <th>创建日期</th>
+                                <th>最后更新时间</th>
+                                <th>是否公开</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="../../images/message.png"></td>
+                            <td>印象城</td>
+                            <td>水电</td>
+                            <td>未央</td>
+                            <td>2018-05-01 09:00:00</td>
+                            <td>2018-05-05 00:00:00</td>
+                            <td><input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF"></td>
+                            <td>
+                                <div class="layui-btn-group">
+                                    <!--<button type="button" class="layui-btn">预览</button>-->
+                                    <a href="projectDetail.html" class="layui-btn">预览</a>
+                                    <a href="updateProject.html" class="layui-btn">更新</a>
+                                    <a href="editProject.html" class="layui-btn editBtn">编辑</a>
+                                    <button type="button" class="layui-btn deleteBtn">删除</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
+                <div class="pageWrap">这里是分页</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    layui.use(['form', 'layer', 'jquery'], function() {
+        var form = layui.form,
+            layer = layui.layer,
+            $ = layui.jquery;
+        //删除活动
+        $(".deleteBtn").click(function() {
+            var me = $(this);
+            layer.confirm('确定要删除吗？', {
+                btn: ['确定', '取消']
+            }, function() {
+                me.parents("tr").remove();
+                layer.msg('删除成功', {
+                    icon: 1
+                });
+            });
+        });
+    });
+</script>
+
+</html>

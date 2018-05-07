@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>首页</title>
+    <link rel="icon" href="../../images/icon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/login.css">
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <!--顶部导航-->
+        <div class="layui-header" id="header"></div>
+        <!--左侧导航-->
+        <div class="layui-side layui-bg-black" id="left"></div>
+        <div class="layui-body">
+            <div class="main">
+                这里是一张图
+            </div>
+        </div>
+        <!--更换手机弹窗-->
+        <div class="popWrap" style="display: none">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <input type="text" name="uphone" lay-verify="title" autocomplete="off" placeholder="手机号" class="layui-input">
+                </div>
+                <div class="layui-form-item clearfix">
+                    <input type="text" name="code" lay-verify="title" autocomplete="off" placeholder="短信验证码" class="layui-input codeInput fl">
+                    <button type="button" class="layui-btn msgUncode fr ">发送验证码</button>
+                </div>
+                <div class="layui-form-item loginBtn">
+                    <button type="button" class="layui-btn loginButton">立即提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    layui.use(['element', 'jquery', 'layer'], function() {
+        var element = layui.element,
+            $ = layui.jquery,
+            layer = layui.layer;
+        //更换手机弹窗
+        $(".changePhone").click(function() {
+            layer.open({
+                type: 1,
+                title: '更换手机号码',
+                shadeClose: true,
+                scrollbar: false,
+                skin: 'layui-layer-rim',
+                area: ['600px', '400px'],
+                content: $(".popWrap")
+            })
+        });
+        //60秒倒计时
+        $(".msgUncode").click(function() {
+            $me = $(this);
+            time()
+        });
+    });
+</script>
+
+</html>

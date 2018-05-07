@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>角色列表</title>
+    <link rel="icon" href="../../images/icon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <!--顶部导航-->
+        <div class="layui-header" id="header"></div>
+        <!--左侧导航-->
+        <div class="layui-side layui-bg-black" id="left"></div>
+        <div class="layui-body">
+            <div class="main">
+                <!--新增和筛选部分-->
+                <div class="addBtnWrap">
+                    <button type="button" class="layui-btn addBtn">新增角色</button>
+                </div>
+                <!--列表数据部分-->
+                <form class="layui-form">
+                    <table class="layui-table">
+                        <thead>
+                            <tr>
+                                <th>角色ID</th>
+                                <th>角色名称</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>1</td>
+                            <td>管理员</td>
+                            <td><input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF"></td>
+                            <td>
+                                管理员权限不可操作
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>门店管理员</td>
+                            <td><input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF"></td>
+                            <td>
+                                <div class="layui-btn-group">
+                                    <button type="button" class="layui-btn editBtn">编辑</button>
+                                    <a href="editRole.html" class="layui-btn">权限设置</a>
+                                    <button type="button" class="layui-btn deleteBtn">删除</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <div class="pageWrap">这里是分页</div>
+            </div>
+        </div>
+    </div>
+    <!--新增门店弹窗-->
+    <div class="addWrap popWrap">
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label">角色名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item popSubmitBtn">
+                <button type="button" class="layui-btn loginButton">立即提交</button>
+            </div>
+        </form>
+    </div>
+    <!--编辑门店弹窗-->
+    <div class="editWrap popWrap">
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label">角色名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" value="门店管理员">
+                </div>
+            </div>
+            <div class="layui-form-item popSubmitBtn">
+                <button type="button" class="layui-btn loginButton">立即提交</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    layui.use(['form', 'layer', 'jquery'], function() {
+        var form = layui.form,
+            layer = layui.layer,
+            $ = layui.jquery;
+        //删除门店
+        $(".deleteBtn").click(function() {
+            var me = $(this);
+            layer.confirm('确定要删除吗？', {
+                btn: ['确定', '取消']
+            }, function() {
+                me.parents("tr").remove();
+                layer.msg('删除成功', {
+                    icon: 1
+                });
+            });
+        });
+        //新增角色弹窗
+        $(".addBtn").click(function() {
+            layer.open({
+                type: 1,
+                title: '新增角色',
+                shadeClose: true,
+                scrollbar: false,
+                skin: 'layui-layer-rim',
+                area: ['600px', '300px'],
+                content: $(".addWrap")
+            })
+        });
+        //编辑角色弹窗
+        $(".editBtn").click(function() {
+            layer.open({
+                type: 1,
+                title: '编辑角色',
+                shadeClose: true,
+                scrollbar: false,
+                skin: 'layui-layer-rim',
+                area: ['600px', '300px'],
+                content: $(".editWrap")
+            })
+        });
+    });
+</script>
+
+</html>
