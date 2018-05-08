@@ -24,9 +24,11 @@ function time() {
             1000)
     }
 };
-layui.use(['jquery', 'element'], function() {
+layui.use(['jquery', 'element', 'form'], function() {
     var $ = layui.jquery,
-        element = layui.element;
+        element = layui.element,
+        form = layui.form;
     $("#header").load('/page/pulic/head.html');
     $("#left").load('/page/pulic/left.html');
+    form.render();
 });

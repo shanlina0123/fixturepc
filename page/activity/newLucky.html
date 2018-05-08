@@ -181,7 +181,8 @@
                                         <tr class="defaulttr">
                                             <td>
                                                 <div class="uploadImgWrap">
-                                                    <button type="button" class="layui-btn uploadBtn uploadImg"></button>
+                                                    <!--<button type="button" class="layui-btn uploadBtn uploadImg"></button>-->
+                                                    <input type="file" class="uploadBtn uploadImg">
                                                     <div class="imgHome" style="background: url(../../images/add.png) center center no-repeat"></div>
                                                 </div>
                                             </td>
@@ -288,15 +289,17 @@
         });
         //点击添加奖项设置
         $(".addPrice").click(function() {
-                //var num = Math.round(Math.random() * 100);
-                var addTable = $(".priceTable");
-                var addtr = $(".defaulttr").prop("outerHTML");
-                addTable.append(addtr);
+            if ($(".priceTable tr").size() < 10) {
+                var addTable = $(".priceTable")
+                var addtr = $(".defaulttr").prop("outerHTML")
+                addTable.append(addtr)
                 form.render()
-            })
-            //第三个切换上传图片
+            } else {
+                layer.msg("最多添加9个");
+            }
+        });
+        //第三个切换上传图片
         $(".uploadImgWrap").delegate(".uploadImg", "click", function() {
-            console.log("aaaa");
             upload.render({
                 elem: '.uploadImg',
                 url: '/upload/',
