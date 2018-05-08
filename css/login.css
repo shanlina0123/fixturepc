@@ -17,10 +17,10 @@
 .loginWrap {
   position: absolute;
   width: 500px;
-  height: 370px;
+  height: 380px;
   top: 50%;
   left: 50%;
-  margin-top: -185px;
+  margin-top: -190px;
   margin-left: -250px;
   padding: 20px 10px;
   background-color: #fff;
@@ -45,6 +45,15 @@
 }
 .layui-input.codeInput {
   width: 70%;
+}
+.registDeel {
+  margin-bottom: 10px;
+}
+.registDeel a {
+  color: #1E9FFF;
+}
+.registDeel a:hover {
+  opacity: .8;
 }
 .bindingInner {
   width: 500px;
