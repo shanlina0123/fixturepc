@@ -31,7 +31,11 @@
             <div class="main">
                 <h1 class="pageTitle">修改密码</h1>
                 <div class="changepWrap">
-                    <div class="Validform_checktip"><i class="layui-icon" style=" color: #FF5722">&#x1007;</i>请正确输入相关信息</div>
+                    <div class="errorWrap">
+                        <div class="loginError Validform_checktip">
+                            <i class="layui-icon" style=" color: #FF5722">&#x1007;</i>请正确输入相关信息
+                        </div>
+                    </div>
                     <form class="layui-form changeForm" action="../../login.html">
                         <div class="layui-form-item">
                             <input type="text" name="uphone" lay-verify="title" autocomplete="off" placeholder="手机号" class="layui-input">

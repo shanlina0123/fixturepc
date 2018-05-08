@@ -32,7 +32,12 @@
                 <h1 class="pageTitle">绑定手机号</h1>
                 <div class="fullForm">
                     <div class="fullFormInner">
-                        <form class="layui-form" action="">
+                        <div class="errorWrap">
+                            <div class="loginError Validform_checktip">
+                                <i class="layui-icon" style=" color: #FF5722">&#x1007;</i>请正确输入相关信息
+                            </div>
+                        </div>
+                        <form class="layui-form changeForm" action="">
                             <div class="layui-form-item">
                                 <input type="text" name="uphone" lay-verify="title" autocomplete="off" placeholder="手机号" class="layui-input">
                                 <div class="Validform_checktip"><i class="layui-icon" style=" color: #FF5722">&#x1007;</i>此项必填</div>

@@ -155,7 +155,6 @@ a:focus {
   display: none;
 }
 .Validform_error {
-  display: none;
   position: absolute;
   right: -80px;
   top: 0;

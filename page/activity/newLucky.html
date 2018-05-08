@@ -90,7 +90,7 @@
                                         <div class="layui-form-item">
                                             <label class="layui-form-label">活动背景图</label>
                                             <div class="layui-input-block layui-upload">
-                                                <button type="button" class="layui-btn" id="test2"><i class="layui-icon"></i>上传图片</button>
+                                                <button type="button" class="layui-btn tab1Upload"><i class="layui-icon"></i>上传图片</button>
                                                 <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
                                                     预览图：
                                                     <div class="layui-upload-list" id="demo2"></div>
@@ -100,7 +100,7 @@
                                         <div class="layui-form-item">
                                             <label class="layui-form-label">立即抽奖图</label>
                                             <div class="layui-input-block layui-upload">
-                                                <button type="button" class="layui-btn" id="test2"><i class="layui-icon"></i>上传图片</button>
+                                                <button type="button" class="layui-btn tab1Upload"><i class="layui-icon"></i>上传图片</button>
                                                 <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
                                                     预览图：
                                                     <div class="layui-upload-list" id="demo2"></div>
@@ -110,7 +110,7 @@
                                         <div class="layui-form-item">
                                             <label class="layui-form-label">未中奖图</label>
                                             <div class="layui-input-block layui-upload">
-                                                <button type="button" class="layui-btn" id="test2"><i class="layui-icon"></i>上传图片</button>
+                                                <button type="button" class="layui-btn tab1Upload"><i class="layui-icon"></i>上传图片</button>
                                                 <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
                                                     预览图：
                                                     <div class="layui-upload-list" id="demo2"></div>
@@ -168,7 +168,7 @@
                                 </div>
                             </div>
                             <!--奖项设置-->
-                            <div class="layui-tab-item">
+                            <div class="layui-tab-item tabItem">
                                 <form class="layui-form">
                                     <table class="layui-table priceTable">
                                         <tr>
@@ -215,7 +215,9 @@
                                         </tr>
                                     </table>
                                 </form>
-                                <button class="layui-btn addPrice">添加奖项</button>
+                                <div class="btnWrap">
+                                    <button class="layui-btn addPrice">添加奖项</button>
+                                </div>
                             </div>
                             <!--高级设置-->
                             <div class="layui-tab-item">
@@ -239,7 +241,10 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="layui-btn">保存</button>
+                    <div class="btns">
+                        <button type="button" class="layui-btn">暂存</button>
+                        <button type="button" class="layui-btn">保存</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -248,35 +253,21 @@
 <script type="text/javascript" src="../../layui/layui.js"></script>
 <script type="text/javascript" src="../../js/common.js"></script>
 <script>
+    var upload, $;
     layui.use(['form', 'layer', 'jquery', 'laydate', 'upload'], function() {
         var form = layui.form,
             layer = layui.layer,
-            $ = layui.jquery,
-            upload = layui.upload,
-            laydate = layui.laydate;
+            laydate = layui.laydate,
+            $ = layui.jquery;
+        upload = layui.upload;
         //日期
         laydate.render({
             elem: '#datebegin'
         });
         laydate.render({
-            elem: '#datelast'
-        });
-        //点击添加奖项设置
-        $(".addPrice").click(function() {
-            var addTable = $(".priceTable");
-            var addtr = $(".defaulttr").prop("outerHTML");
-            addTable.append(addtr);
-            form.render();
-        });
-        //图片上传
-        upload.render({
-            elem: '.uploadImg',
-            url: '/upload/',
-            done: function(res) {
-                //console.log(res)
-            }
-        });
-        //删除信息
+                elem: '#datelast'
+            })
+            //删除信息
         function deleteItem(index) {
             layer.confirm('确定要删除吗？', {
                 btn: ['确定', '取消']
@@ -286,8 +277,34 @@
                     icon: 1
                 });
             });
-        }
+        };
+        //第一个切换上传
+        upload.render({
+            elem: '.tab1Upload',
+            url: '/upload/',
+            done: function(res) {
+                //console.log(res)
+            }
+        });
+        //点击添加奖项设置
+        $(".addPrice").click(function() {
+                //var num = Math.round(Math.random() * 100);
+                var addTable = $(".priceTable");
+                var addtr = $(".defaulttr").prop("outerHTML");
+                addTable.append(addtr);
+                form.render()
+            })
+            //第三个切换上传图片
+        $(".uploadImgWrap").delegate(".uploadImg", "click", function() {
+            console.log("aaaa");
+            upload.render({
+                elem: '.uploadImg',
+                url: '/upload/',
+                done: function(res) {}
+            })
+        })
     });
 </script>
+
 
 </html>
