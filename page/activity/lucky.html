@@ -88,7 +88,7 @@
                             <td><input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF"></td>
                             <td>
                                 <div class="layui-btn-group">
-                                    <button type="button" class="layui-btn">推广</button>
+                                    <button type="button" class="layui-btn spreadBtn">推广</button>
                                     <a href='editlucky.html' type="button" class="layui-btn editBtn">编辑</a>
                                     <button type="button" class="layui-btn deleteBtn">删除</button>
                                 </div>
@@ -96,10 +96,32 @@
                         </tr>
                     </table>
                 </form>
-
                 <div class="pageWrap">这里是分页</div>
             </div>
         </div>
+    </div>
+    <!--推广弹窗-->
+    <div class="downPop" style="display: none">
+        <div class="popwarp">
+            <p class="activename">开心转转转</p>
+            <div class="prizemsg">未央店</div>
+            <p class="erweimanotice">扫描下方二维码参与抽奖</p>
+            <div class="prizepart">
+                <div class="prizeinner clearfix">
+                    <div class="priceitem fl"><img src="../../images/prize1.png" class="itemimg"></div>
+                    <div class="priceitem fl"><img src="../../images/prize2.png" class="itemimg"></div>
+                    <div class="priceitem fl"><img src="../../images/prize3.png" class="itemimg"></div>
+                    <div class="priceitem fl"><img src="../../images/prize4.png" class="itemimg"></div>
+                    <div class="priceitem fl"><img src="../../images/erweima.jpg" class="itemimg"></div>
+                    <div class="priceitem fl"><img src="../../images/prize5.png" class="itemimg"></div>
+                    <div class="priceitem fl"><img src="../../images/prize6.png" class="itemimg"></div>
+                    <div class="priceitem fl"><img src="../../images/prize7.png" class="itemimg"></div>
+                    <div class="priceitem fl"><img src="../../images/prize8.png" class="itemimg"></div>
+                </div>
+            </div>
+            <img src="../../images/defultlogo.jpg" class="poplog">
+        </div>
+        <img src="../../images/download.png" class="downImg" title="点击下载图片">
     </div>
 </body>
 <script type="text/javascript" src="../../layui/layui.js"></script>
@@ -121,6 +143,15 @@
                 });
             });
         });
+        $(".spreadBtn").click(function() {
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 0,
+                shadeClose: true,
+                content: $(".downPop")
+            })
+        })
     });
 </script>
 
