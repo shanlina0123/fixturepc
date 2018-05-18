@@ -215,3 +215,6 @@ a:focus {
   box-sizing: content-box;
   border: 1px solid #e2e2e2;
 }
+.imgnotice {
+  color: #c2c2c2;
+}
