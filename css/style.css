@@ -440,3 +440,22 @@
 .rightjiantouwrap .sright {
   margin: 30px 10px 30px 10px;
 }
+/*页面错误提醒*/
+.errorwrap {
+  padding-top: 100px;
+}
+.errorwrap img {
+  display: block;
+  margin: 0 auto;
+}
+.errorwrap .backindex {
+  display: block;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  background-color: #38a0df;
+  margin: 15px auto;
+}
