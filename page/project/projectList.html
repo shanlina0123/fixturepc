@@ -97,7 +97,7 @@
                             <td><input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF"></td>
                             <td>
                                 <div class="layui-btn-group">
-                                    <!--<button type="button" class="layui-btn">预览</button>-->
+                                    <button type="button" class="layui-btn publicBtn">推广</button>
                                     <a href="projectDetail.html" class="layui-btn">预览</a>
                                     <a href="updateProject.html" class="layui-btn">更新</a>
                                     <a href="editProject.html" class="layui-btn editBtn">编辑</a>
@@ -107,9 +107,19 @@
                         </tr>
                     </table>
                 </form>
-
                 <div class="pageWrap">这里是分页</div>
             </div>
+        </div>
+    </div>
+    <!--推广弹窗-->
+    <div class="publicpop">
+        <div class="publicImgWrap">
+            <div class="companyname">积木家</div>
+            <div class="erweimaImg"><img src="../../images/erweima.png" width="80" height="80"></div>
+        </div>
+        <div class="downWrap">
+            <img src="../../images/see.png" title="预览">
+            <img src="../../images/download.png" title="下载">
         </div>
     </div>
 </body>
@@ -132,6 +142,16 @@
                 });
             });
         });
+        //推广弹窗
+        $(".publicBtn").click(function() {
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 0,
+                shadeClose: true,
+                content: $(".publicpop")
+            })
+        })
     });
 </script>
 
