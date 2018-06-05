@@ -53,14 +53,20 @@
                         </form>
                     </div>
                 </div>
+
             </div>
         </div>
+    </div>
+    <!--二维码弹窗-->
+    <div class="erweimapop" style="display: none;">
+        <div class="erweima"></div>
+        <p class="poptext">扫描二维码认证您的身份</p>
     </div>
 </body>
 <script type="text/javascript" src="../../layui/layui.js"></script>
 <script type="text/javascript" src="../../js/common.js"></script>
 <script>
-    layui.use(['element', 'jquery'], function() {
+    layui.use(['element', 'jquery', 'layer'], function() {
         var element = layui.element,
             $ = layui.jquery;
         //60秒倒计时
@@ -68,10 +74,14 @@
             $me = $(this);
             time()
         });
-        // $("#header").load('/page/pulic/head.html', function() {
-        //     $.getScript('/layui/layui.js')
-        // });
-        // $("#left").load('/page/pulic/left.html');
+        //二维码弹窗
+        layer.open({
+            type: 1,
+            title: '绑定微信',
+            closeBtn: 0,
+            shadeClose: true,
+            content: $(".erweimapop")
+        })
     });
 </script>
 
