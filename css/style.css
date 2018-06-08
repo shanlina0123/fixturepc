@@ -440,9 +440,6 @@
 .rightjiantouwrap .sright {
   margin: 30px 10px 30px 10px;
 }
-.readonly{
-  background-color:#f2f2f2;
-}
 /*页面错误提醒*/
 .errorwrap {
   padding-top: 100px;
@@ -497,4 +494,26 @@
   display: inline-block;
   margin: 20px 10px;
   cursor: pointer;
+}
+/*咨询消息新页面*/
+.tablenotice {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.exampletable {
+  width: 600px;
+  font-size: 14px;
+}
+.exampletable tr td {
+  padding: 10px 0;
+}
+.exampletable tr td:first-child {
+  width: 130px;
+}
+.exampletable .inputs {
+  width: 360px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
 }
