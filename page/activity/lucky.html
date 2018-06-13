@@ -101,7 +101,7 @@
         </div>
     </div>
     <!--推广弹窗-->
-    <div class="downPop" style="display: none">
+    <!-- <div class="downPop" style="display: none">
         <div class="popwarp">
             <p class="activename">开心转转转</p>
             <div class="prizemsg">未央店</div>
@@ -122,6 +122,14 @@
             <img src="../../images/defultlogo.jpg" class="poplog">
         </div>
         <img src="../../images/download.png" class="downImg" title="点击下载图片">
+    </div> -->
+    <div class="publicpop">
+        <div class="publicImgWrap">
+            <div class="erweimaImg"><img src="../../images/erweima.png" width="280" height="280"></div>
+        </div>
+        <div class="downWrap">
+            <img src="../../images/download.png" title="下载">
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="../../layui/layui.js"></script>
@@ -149,7 +157,7 @@
                 title: false,
                 closeBtn: 0,
                 shadeClose: true,
-                content: $(".downPop")
+                content: $(".publicpop")
             })
         })
     });
