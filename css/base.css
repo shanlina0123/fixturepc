@@ -114,6 +114,11 @@ a:focus {
 .layui-layout-admin .layui-body {
   bottom: 0;
 }
+button.layui-btn {
+  display: block;
+  width: 106px;
+  overflow: hidden;
+}
 .pageTitle {
   font-size: 18px;
   padding: 10px 0;

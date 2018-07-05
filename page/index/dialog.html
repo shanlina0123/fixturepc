@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>对话页面</title>
+    <link rel="icon" href="../../images/icon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/dialog.css">
+    <style>
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+        
+        body,
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        body,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            color: #4d4d4d;
+            font: 14px/1.4em 'Helvetica Neue', Helvetica, 'Microsoft Yahei', Arial, sans-serif;
+            background-size: cover;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        #chat {
+            margin: 20px auto;
+            width: 800px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dialogwrap clearfix">
+        <div class="sidebar">
+            <div class="m-card">
+                <header><img class="avatar" width="40" height="40" alt="Coffce" src="../../images/微信图片_20180705205800.jpg">
+                    <p class="name">Coffce</p>
+                </header>
+                <footer><input class="search" placeholder="搜索"></footer>
+            </div>
+            <div class="m-list">
+                <ul>
+                    <li>
+                        <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
+                        <p class="name">云易装</p>
+                        <span>11:48</span>
+                        <a href="javascript:;" class="deleteli">删除对话</a>
+                    </li>
+                    <li>
+                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
+                        <p class="name">白云</p>
+                        <span>12:48</span>
+                        <a href="javascript:;" class="deleteli">删除对话</a>
+                    </li>
+                    <li>
+                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
+                        <p class="name">装修地</p>
+                        <span>12:48</span>
+                        <a href="javascript:;" class="deleteli">删除对话</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--如果没有对话消息给main添加nomsg的样式-->
+        <div class="main nomsg">
+            <div class="hasmeg hide">
+                <div class="mainuser"><span>云易装</span></div>
+                <div class="m-message">
+                    <ul>
+                        <li class="clearfix">
+                            <p class="time"><span>9:29</span></p>
+                            <div>
+                                <img class="avatar" width="30" height="30" src="../../images/2.png">
+                                <div class="text">
+                                    <!-- <div class="textright hide">
+                                        <a href="javascript:;">复制</a>
+                                        <a href="javascript:;">撤回</a>
+                                        <a href="javascript:;">删除</a>
+                                    </div> -->
+                                    Hello，这是一个基于Vue + Webpack构建的简单chat示例，聊天记录保存在localStorge。简单演示了Vue的基础特性和webpack配置。
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <p class="time"><span>9:29</span></p>
+                            <div class=""><img class="avatar" width="30" height="30" src="../../images/2.png">
+                                <div class="text">
+                                    <!-- <div class="textright hide">
+                                        <a href="javascript:;">复制</a>
+                                        <a href="javascript:;">撤回</a>
+                                        <a href="javascript:;">删除</a>
+                                    </div> -->
+                                    项目地址: https://github.com/coffcer/vue-chat
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <p class="time"><span>11:48</span></p>
+                            <div class="self"><img class="avatar" width="30" height="30" src="../../images/1.jpg">
+                                <div class="text">
+                                    <!-- <div class="textright hide">
+                                        <a href="javascript:;">复制</a>
+                                        <a href="javascript:;">撤回</a>
+                                        <a href="javascript:;">删除</a>
+                                    </div> -->
+                                    发挂号费
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <p class="time"><span>11:48</span></p>
+                            <div class="self"><img class="avatar" width="30" height="30" src="../../images/1.jpg">
+                                <div class="text">
+                                    <!-- <div class="textright hide">
+                                        <a href="javascript:;">复制</a>
+                                        <a href="javascript:;">撤回</a>
+                                        <a href="javascript:;">删除</a>
+                                    </div> -->
+                                    错误时方可为
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <div class="handlewrap clearfix">
+                        <img src="../../images/4.png" class="fl">
+                        <div class="uploadwrap fl">
+                            <input type="file" class="uploadinput">
+                            <img src="../../images/5.png">
+                        </div>
+                    </div>
+                    <div class="insearwrap">
+                        <textarea></textarea>
+                    </div>
+                    <div class="sendbtnwrap ">
+                        <p class="notice hide">不能发送空白消息</p>
+                        <button>发送</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script>
+    layui.use(['jquery', 'layer'], function() {
+        var $ = layui.jquery,
+            layer = layui.layer;
+        document.oncontextmenu = function(e) {
+            e.preventDefault();
+        };
+        //模糊搜索
+        $(".m-card .search").bind("input propertychange",
+            function() {
+                var queryStr = $.trim($(this).val());
+                if (queryStr === '') {
+                    $(".m-list ul li").show();
+                } else {
+                    $(".m-list ul li").hide().find(".name").filter(":contains('" + queryStr + "')").parent("li").show();
+                }
+            });
+        //聊天列表操作
+        $(".m-list li").mousedown(function(e) {
+            if (3 == e.which) {
+                $(this).find(".deleteli").css("display", "block");
+                $(this).siblings().find(".deleteli").css("display", "none");
+                var xx = e.pageX - $(this).offset().left;
+                var yy = e.pageY - $(this).offset().top;
+                $(this).find(".deleteli").css("top", yy).css("left", xx);
+            } else if (1 == e.which && (!$(e.target).is(".deleteli"))) {
+                $(this).addClass("active").siblings().removeClass("active");
+                $(".main").removeClass("nomsg");
+                $(".hasmeg").removeClass("hide");
+                $(".mainuser span").text($(this).find(".name").text());
+                $(this).find(".deleteli").css("display", "none");
+                $(this).addClass("active").siblings().find(".deleteli").css("display", "none");
+            }
+        })
+        $(".deleteli").click(function() {
+                $(this).parent("li").remove();
+            })
+            //底部输入域
+        $(".insearwrap textarea").focus(function() {
+            $(this).addClass("whitebg");
+            $(".bottom").addClass("whitebg");
+        })
+        $(".insearwrap textarea").blur(function() {
+                $(this).removeClass("whitebg");
+                $(".bottom").removeClass("whitebg");
+            })
+            //对已发送的消息操作
+            // $(".m-message .text").mousedown(function(e) {
+            //         if (3 == e.which) {
+            //             $(this).find(".textright").removeClass("hide");
+            //         } else if (1 == e.which && (!$(e.target).is(".textright a"))) {
+            //             $(this).find(".textright").addClass("hide");
+            //         }
+            //     })
+            //发送消息
+        $(".sendbtnwrap button").click(function() {
+            var textareatext = $(".insearwrap textarea").val();
+            if (textareatext == "") {
+                $(this).siblings(".notice").removeClass("hide").delay(3000).hide(300);
+            } else {
+                $(".m-message ul").append(" <" +
+                    "li class = 'clearfix' >" +
+                    "<p class = 'time' > " +
+                    "<span > 11: 48 " +
+                    "</span></p >" +
+                    "<div class = 'self' >" +
+                    "<img class = 'avatar' width = '30' height = '30'src ='../../images/1.jpg'>" +
+                    "<div class = 'text' >" +
+                    "" + textareatext +
+                    " </div> </div> </li>")
+                $(".insearwrap textarea").val("")
+            }
+        })
+    });
+</script>
+
+</html>
