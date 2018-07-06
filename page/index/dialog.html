@@ -322,8 +322,9 @@
                         "<div class = 'text' >" +
                         "" + textareatext +
                         " </div> </div> </li>")
-                    $(".insearwrap textarea").val("")
+                    $(".insearwrap textarea").val("");
                 }
+                $(".m-message").scrollTop($(".m-message")[0].scrollHeight);
             })
             //回车发消息
         $("body").keyup(function(e) {
@@ -347,6 +348,7 @@
                     " </div> </div> </li>")
                 $(".insearwrap textarea").val("")
             }
+            $(".m-message").scrollTop($(".m-message")[0].scrollHeight);
         })
     });
 </script>
