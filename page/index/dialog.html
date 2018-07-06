@@ -70,6 +70,8 @@
                         <p class="name">云易装</p>
                         <span>11:48</span>
                         <a href="javascript:;" class="deleteli">删除对话</a>
+                        <!--有未读消息时显示下边标签-->
+                        <span class="unread"></span>
                     </li>
                     <li>
                         <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
@@ -141,30 +143,6 @@
                         <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
                         <p class="name">云易装</p>
                         <span>11:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
-                        <p class="name">白云</p>
-                        <span>12:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
-                        <p class="name">装修地</p>
-                        <span>12:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
-                        <p class="name">云易装</p>
-                        <span>11:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
-                        <p class="name">白云</p>
-                        <span>12:48</span>
                         <a href="javascript:;" class="deleteli">删除对话</a>
                     </li>
                 </ul>
@@ -192,7 +170,8 @@
                         </li>
                         <li class="clearfix">
                             <p class="time"><span>9:29</span></p>
-                            <div class=""><img class="avatar" width="30" height="30" src="../../images/2.png">
+                            <div class="">
+                                <img class="avatar" width="30" height="30" src="../../images/2.png">
                                 <div class="text">
                                     <!-- <div class="textright hide">
                                         <a href="javascript:;">复制</a>
@@ -201,11 +180,14 @@
                                     </div> -->
                                     项目地址: https://github.com/coffcer/vue-chat
                                 </div>
+                                <img src="../../images/sendfail.png" width="20" height="20" class="undsendimage">
                             </div>
                         </li>
                         <li class="clearfix">
                             <p class="time"><span>11:48</span></p>
-                            <div class="self"><img class="avatar" width="30" height="30" src="../../images/1.jpg">
+                            <div class="self">
+                                <img class="avatar" width="30" height="30" src="../../images/1.jpg">
+                                <img src="../../images/sendfail.png" width="20" height="20" class="undsendimage">
                                 <div class="text">
                                     <!-- <div class="textright hide">
                                         <a href="javascript:;">复制</a>
@@ -284,6 +266,11 @@
                 $(".mainuser span").text($(this).find(".name").text());
                 $(this).find(".deleteli").css("display", "none");
                 $(this).addClass("active").siblings().find(".deleteli").css("display", "none");
+                //消息未发送成功提示
+                $(".m-message li").each(function() {
+                    var textheight = $(this).find(".text").height();
+                    $(this).find(".undsendimage").css("margin-top", (-textheight) + "px")
+                })
             }
         })
         $(".deleteli").click(function() {
@@ -349,7 +336,7 @@
                 $(".insearwrap textarea").val("")
             }
             $(".m-message").scrollTop($(".m-message")[0].scrollHeight);
-        })
+        });
     });
 </script>
 

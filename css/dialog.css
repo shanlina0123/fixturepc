@@ -88,6 +88,15 @@ body {
 .dialogwrap .m-list li .deleteli:hover {
   color: #333;
 }
+.dialogwrap .m-list li .unread {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #fc0909;
+  left: 33px;
+  top: 4px;
+}
 .dialogwrap .m-list .avatar {
   border-radius: 2px;
 }
