@@ -6,9 +6,13 @@ body{
     background-size: cover;
 }
 .dialogwrap{
-    margin: 20px auto;
+    position: relative;
     width: 800px;
-    height: 700px;
+    height: 600px;
+    left: 50%;
+    top: 50%;
+    margin-left: -400px;
+    margin-top: -300px;
     .sidebar {
         float: left;
         height: 100%;
@@ -45,11 +49,11 @@ body{
         }
     }
     .m-list {
-        height: 598px;
-        overflow-y: auto;
-        overflow-x: hidden;
         ul{
             width: 100%;
+            height: 498px;
+            overflow-y: auto;
+            overflow-x: hidden;
             position: absolute;
         }
         li {
@@ -92,7 +96,7 @@ body{
     .main {
         float: left;
         width: 600px;
-        height: 700px;
+        height: 600px;
         padding: 0;
         &.nomsg{
             background: #F5F5F5 url(../images/bgcklogo.png) center no-repeat;
@@ -111,7 +115,7 @@ body{
     }
 }
 .m-message {
-    height: 432px;
+    height: 360px;
     padding: 10px 15px;
     overflow-y: auto;
     box-sizing: unset;
@@ -145,9 +149,9 @@ body{
         line-height: 2.5;
         font-size: 9pt;
         text-align: left;
-        word-break: break-all;
         background-color: #fafafa;
         border-radius: 4px;
+        white-space: pre-line;
         &:before {
             content: " ";
             position: absolute;
@@ -211,10 +215,13 @@ body{
     }
 }
 .bottom{
-    background-color: #F5F5F5;
-    &.whitebg{
-        background-color: #FFFFFF;
-    }
+    position: relative;
+    bottom: 0;
+    background-color: #FFF;
+    border-top: 1px solid #E7E7E7;
+    // &.whitebg{
+    //     background-color: #FFFFFF;
+    // }
 }
 .handlewrap{
     padding: 5px 10px 0 10px;
@@ -248,23 +255,23 @@ body{
 }
 .insearwrap{
     textarea{
-        width: 580px;
-        height: 127px;
+        width: 600px;
+        height: 125px;
         display: block;
-        padding:5px 10px;
+        padding:15px 15px;
         margin: 0 auto;
         outline: none;
         border: none;
-        background-color: #F5F5F5;
-        &.whitebg{
-            background-color: #FFF;
-        }
+        background-color: #FFF;
+        // &.whitebg{
+        //     background-color: #FFF;
+        // }
     }
 }
 .sendbtnwrap{
     position: relative;
     text-align: right;
-    padding:10px;
+    padding:12px 30px;
     button{
         font-size: 14px;
         padding:0;
