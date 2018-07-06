@@ -58,7 +58,7 @@
     <div class="dialogwrap clearfix">
         <div class="sidebar">
             <div class="m-card">
-                <header><img class="avatar" width="40" height="40" alt="Coffce" src="../../images/微信图片_20180705205800.jpg">
+                <header><img class="avatar" width="40" height="40" alt="Coffce" src="../../images/1.jpg">
                     <p class="name">Coffce</p>
                 </header>
                 <footer><input class="search" placeholder="搜索"></footer>
@@ -156,7 +156,7 @@
                         </div>
                     </div>
                     <div class="insearwrap">
-                        <textarea></textarea>
+                        <textarea placeholder="按 Enter 发送"></textarea>
                     </div>
                     <div class="sendbtnwrap ">
                         <p class="notice hide">不能发送空白消息</p>
@@ -228,6 +228,23 @@
             if (textareatext == "") {
                 $(this).siblings(".notice").removeClass("hide").delay(3000).hide(300);
             } else {
+                $(".m-message ul").append(" <" +
+                    "li class = 'clearfix' >" +
+                    "<p class = 'time' > " +
+                    "<span > 11: 48 " +
+                    "</span></p >" +
+                    "<div class = 'self' >" +
+                    "<img class = 'avatar' width = '30' height = '30'src ='../../images/1.jpg'>" +
+                    "<div class = 'text' >" +
+                    "" + textareatext +
+                    " </div> </div> </li>")
+                $(".insearwrap textarea").val("")
+            }
+        })
+        $("body").keyup(function(e) {
+            var textareatext = $(".insearwrap textarea").val();
+            if (e.keyCode == 13) {
+                e.preventDefault();
                 $(".m-message ul").append(" <" +
                     "li class = 'clearfix' >" +
                     "<p class = 'time' > " +
