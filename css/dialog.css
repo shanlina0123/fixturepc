@@ -64,7 +64,11 @@ body {
   position: relative;
 }
 .dialogwrap .m-list li.active {
-  background-color: #C7C7C8;
+  background-color: #CAC8C6;
+}
+.dialogwrap .m-list li:hover {
+  background-color: #CFD0D1;
+  opacity: .8;
 }
 .dialogwrap .m-list li > span {
   font-size: 12px;
@@ -190,13 +194,14 @@ body {
   text-align: right;
 }
 .m-message .self .text {
-  background-color: #b2e281;
+  color: #f8f8f8;
+  background-color: #01AAED;
 }
 .m-message .self .text:before {
   right: inherit;
   left: 100%;
   border-right-color: transparent;
-  border-left-color: #b2e281;
+  border-left-color: #01AAED;
 }
 .m-message .self .text .textright {
   left: auto;
