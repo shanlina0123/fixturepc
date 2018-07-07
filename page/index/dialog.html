@@ -23,215 +23,190 @@
         *:after {
             box-sizing: border-box;
         }
-        
-        body,
-        html {
-            height: 100%;
-            overflow: hidden;
-        }
-        
-        body,
-        ul {
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            color: #4d4d4d;
-            font: 14px/1.4em 'Helvetica Neue', Helvetica, 'Microsoft Yahei', Arial, sans-serif;
-            background-size: cover;
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
-        #chat {
-            margin: 20px auto;
-            width: 800px;
-            height: 600px;
-        }
     </style>
 </head>
 
 <body>
-    <div class="dialogwrap clearfix">
-        <div class="sidebar">
-            <div class="m-card">
-                <header><img class="avatar" width="40" height="40" alt="Coffce" src="../../images/1.jpg">
-                    <p class="name">Coffce</p>
-                </header>
-                <footer><input class="search" placeholder="搜索"></footer>
-            </div>
-            <div class="m-list">
-                <ul>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
-                        <p class="name">云易装</p>
-                        <span>11:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                        <!--有未读消息时显示下边标签-->
-                        <span class="unread"></span>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
-                        <p class="name">白云</p>
-                        <span>12:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
-                        <p class="name">装修地</p>
-                        <span>12:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
-                        <p class="name">云易装</p>
-                        <span>11:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
-                        <p class="name">白云</p>
-                        <span>12:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
-                        <p class="name">装修地</p>
-                        <span>12:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
-                        <p class="name">云易装</p>
-                        <span>11:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
-                        <p class="name">白云</p>
-                        <span>12:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
-                        <p class="name">装修地</p>
-                        <span>12:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
-                        <p class="name">云易装</p>
-                        <span>11:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
-                        <p class="name">白云</p>
-                        <span>12:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
-                        <p class="name">装修地</p>
-                        <span>12:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                    <li>
-                        <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
-                        <p class="name">云易装</p>
-                        <span>11:48</span>
-                        <a href="javascript:;" class="deleteli">删除对话</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--如果没有对话消息给main添加nomsg的样式-->
-        <div class="main nomsg">
-            <div class="hasmeg hide">
-                <div class="mainuser"><span>云易装</span></div>
-                <div class="m-message">
+    <div class="dwrap">
+        <div class="dialogwrap clearfix">
+            <div class="sidebar">
+                <div class="m-card">
+                    <header><img class="avatar" width="40" height="40" alt="Coffce" src="../../images/1.jpg">
+                        <p class="name">Coffce</p>
+                    </header>
+                    <footer><input class="search" placeholder="搜索"></footer>
+                </div>
+                <div class="m-list">
                     <ul>
-                        <li class="clearfix">
-                            <p class="time"><span>9:29</span></p>
-                            <div>
-                                <img class="avatar" width="30" height="30" src="../../images/2.png">
-                                <div class="text">
-                                    <!-- <div class="textright hide">
-                                        <a href="javascript:;">复制</a>
-                                        <a href="javascript:;">撤回</a>
-                                        <a href="javascript:;">删除</a>
-                                    </div> -->
-                                    Hello，这是一个基于Vue + Webpack构建的简单chat示例，聊天记录保存在localStorge。简单演示了Vue的基础特性和webpack配置。
-                                </div>
-                            </div>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
+                            <p class="name">云易装</p>
+                            <span>11:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
+                            <!--有未读消息时显示下边标签-->
+                            <span class="unread"></span>
                         </li>
-                        <li class="clearfix">
-                            <p class="time"><span>9:29</span></p>
-                            <div class="">
-                                <img class="avatar" width="30" height="30" src="../../images/2.png">
-                                <div class="text">
-                                    <!-- <div class="textright hide">
-                                        <a href="javascript:;">复制</a>
-                                        <a href="javascript:;">撤回</a>
-                                        <a href="javascript:;">删除</a>
-                                    </div> -->
-                                    项目地址: https://github.com/coffcer/vue-chat
-                                </div>
-                                <img src="../../images/sendfail.png" width="20" height="20" class="undsendimage">
-                            </div>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
+                            <p class="name">白云</p>
+                            <span>12:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
                         </li>
-                        <li class="clearfix">
-                            <p class="time"><span>11:48</span></p>
-                            <div class="self">
-                                <img class="avatar" width="30" height="30" src="../../images/1.jpg">
-                                <img src="../../images/sendfail.png" width="20" height="20" class="undsendimage">
-                                <div class="text">
-                                    <!-- <div class="textright hide">
-                                        <a href="javascript:;">复制</a>
-                                        <a href="javascript:;">撤回</a>
-                                        <a href="javascript:;">删除</a>
-                                    </div> -->
-                                    发挂号费
-                                </div>
-                            </div>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
+                            <p class="name">装修地</p>
+                            <span>12:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
                         </li>
-                        <li class="clearfix">
-                            <p class="time"><span>11:48</span></p>
-                            <div class="self"><img class="avatar" width="30" height="30" src="../../images/1.jpg">
-                                <div class="text">
-                                    <!-- <div class="textright hide">
-                                        <a href="javascript:;">复制</a>
-                                        <a href="javascript:;">撤回</a>
-                                        <a href="javascript:;">删除</a>
-                                    </div> -->
-                                    错误时方可为
-                                </div>
-                            </div>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
+                            <p class="name">云易装</p>
+                            <span>11:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
+                        </li>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
+                            <p class="name">白云</p>
+                            <span>12:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
+                        </li>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
+                            <p class="name">装修地</p>
+                            <span>12:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
+                        </li>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
+                            <p class="name">云易装</p>
+                            <span>11:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
+                        </li>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
+                            <p class="name">白云</p>
+                            <span>12:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
+                        </li>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
+                            <p class="name">装修地</p>
+                            <span>12:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
+                        </li>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
+                            <p class="name">云易装</p>
+                            <span>11:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
+                        </li>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
+                            <p class="name">白云</p>
+                            <span>12:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
+                        </li>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="webpack" src="../../images/3.jpg">
+                            <p class="name">装修地</p>
+                            <span>12:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
+                        </li>
+                        <li>
+                            <img class="avatar" width="30" height="30" alt="示例介绍" src="../../images/2.png">
+                            <p class="name">云易装</p>
+                            <span>11:48</span>
+                            <a href="javascript:;" class="deleteli">删除对话</a>
                         </li>
                     </ul>
                 </div>
-                <div class="bottom">
-                    <!-- <div class="handlewrap clearfix">
-                        <img src="../../images/4.png" class="fl">
-                        <div class="uploadwrap fl">
-                            <input type="file" class="uploadinput">
-                            <img src="../../images/5.png">
-                        </div>
-                    </div> -->
-                    <div class="insearwrap">
-                        <textarea placeholder="按 Enter 发送"></textarea>
+            </div>
+            <!--如果没有对话消息给main添加nomsg的样式-->
+            <div class="main nomsg">
+                <div class="hasmeg hide">
+                    <div class="mainuser"><span>云易装</span></div>
+                    <div class="m-message">
+                        <ul>
+                            <li class="clearfix">
+                                <p class="time"><span>9:29</span></p>
+                                <div>
+                                    <img class="avatar" width="30" height="30" src="../../images/2.png">
+                                    <div class="text">
+                                        <!-- <div class="textright hide">
+                                                    <a href="javascript:;">复制</a>
+                                                    <a href="javascript:;">撤回</a>
+                                                    <a href="javascript:;">删除</a>
+                                                </div> -->
+                                        Hello，这是一个基于Vue + Webpack构建的简单chat示例，聊天记录保存在localStorge。简单演示了Vue的基础特性和webpack配置。
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <p class="time"><span>9:29</span></p>
+                                <div class="">
+                                    <img class="avatar" width="30" height="30" src="../../images/2.png">
+                                    <div class="text">
+                                        <!-- <div class="textright hide">
+                                                    <a href="javascript:;">复制</a>
+                                                    <a href="javascript:;">撤回</a>
+                                                    <a href="javascript:;">删除</a>
+                                                </div> -->
+                                        项目地址: https://github.com/coffcer/vue-chat
+                                    </div>
+                                    <img src="../../images/sendfail.png" width="20" height="20" class="undsendimage">
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <p class="time"><span>11:48</span></p>
+                                <div class="self">
+                                    <img class="avatar" width="30" height="30" src="../../images/1.jpg">
+                                    <img src="../../images/sendfail.png" width="20" height="20" class="undsendimage">
+                                    <div class="text">
+                                        <!-- <div class="textright hide">
+                                                    <a href="javascript:;">复制</a>
+                                                    <a href="javascript:;">撤回</a>
+                                                    <a href="javascript:;">删除</a>
+                                                </div> -->
+                                        发挂号费
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <p class="time"><span>11:48</span></p>
+                                <div class="self"><img class="avatar" width="30" height="30" src="../../images/1.jpg">
+                                    <div class="text">
+                                        <!-- <div class="textright hide">
+                                                    <a href="javascript:;">复制</a>
+                                                    <a href="javascript:;">撤回</a>
+                                                    <a href="javascript:;">删除</a>
+                                                </div> -->
+                                        错误时方可为
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="sendbtnwrap ">
-                        <p class="notice hide">不能发送空白消息</p>
-                        <button>发送</button>
+                    <div class="bottom">
+                        <!-- <div class="handlewrap clearfix">
+                                    <img src="../../images/4.png" class="fl">
+                                    <div class="uploadwrap fl">
+                                        <input type="file" class="uploadinput">
+                                        <img src="../../images/5.png">
+                                    </div>
+                                </div> -->
+                        <div class="insearwrap">
+                            <textarea placeholder="按 Enter 发送"></textarea>
+                        </div>
+                        <div class="sendbtnwrap ">
+                            <p class="notice hide">不能发送空白消息</p>
+                            <button>发送</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 <script type="text/javascript" src="../../layui/layui.js"></script>
 <script>
