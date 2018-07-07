@@ -234,17 +234,49 @@
         font-size: 16px;
         text-align: center;
     }
-    .uploadmsg{
-        border: 1px solid #e2e2e2;
-        width: 500px;
-        margin: 20px auto 0 auto;
+    .settingwrap{
+        width: 230px;
+        padding-left: 10px;
+        margin:20px auto;
+    }
+    .settingwrapul{
+        border-left: 2px solid #bfbfbf;
         li{
-            text-align: center;
-            height: 30px;
-            line-height: 30px;
-            border-top: 1px solid #e2e2e2;
-            &:first-child{
-                border-top: none;
+            margin-top: 20px;
+            font-size: 14px;
+            margin-left: -12px;
+            .number{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border-radius: 20px;
+                text-align: center;
+                line-height: 20px;
+                color: #fff;
+                font-size: 12px;
+                background-color: #bfbfbf;
+            }
+            .name{
+                margin-left: 10px;
+            }
+            a{
+                color: #1E9FFF;
+                margin-left: 10px;
+                &:hover{
+                    color: #1E9FFF;
+                }
+            }
+        }
+        .success{
+            color: #009688;
+            .number{
+                background-color: #009688;
+            }
+        }
+        .fail{
+            color: #fe161b;
+            .number{
+                background-color: #fe161b;
             }
         }
     }
@@ -261,6 +293,20 @@
 }
 .part3{
     display: none;
+    .uploadmsg{
+        border: 1px solid #e2e2e2;
+        width: 500px;
+        margin: 20px auto 0 auto;
+        li{
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            border-top: 1px solid #e2e2e2;
+            &:first-child{
+                border-top: none;
+            }
+        }
+    }
 }
 .part4{
     display: none;

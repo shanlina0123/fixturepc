@@ -222,19 +222,51 @@
   font-size: 16px;
   text-align: center;
 }
-.part2 .uploadmsg {
-  border: 1px solid #e2e2e2;
-  width: 500px;
-  margin: 20px auto 0 auto;
+.part2 .settingwrap {
+  width: 230px;
+  padding-left: 10px;
+  margin: 20px auto;
 }
-.part2 .uploadmsg li {
+.part2 .settingwrapul {
+  border-left: 2px solid #bfbfbf;
+}
+.part2 .settingwrapul li {
+  margin-top: 20px;
+  font-size: 14px;
+  margin-left: -12px;
+}
+.part2 .settingwrapul li .number {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
   text-align: center;
-  height: 30px;
-  line-height: 30px;
-  border-top: 1px solid #e2e2e2;
+  line-height: 20px;
+  color: #fff;
+  font-size: 12px;
+  background-color: #bfbfbf;
 }
-.part2 .uploadmsg li:first-child {
-  border-top: none;
+.part2 .settingwrapul li .name {
+  margin-left: 10px;
+}
+.part2 .settingwrapul li a {
+  color: #1E9FFF;
+  margin-left: 10px;
+}
+.part2 .settingwrapul li a:hover {
+  color: #1E9FFF;
+}
+.part2 .settingwrapul .success {
+  color: #009688;
+}
+.part2 .settingwrapul .success .number {
+  background-color: #009688;
+}
+.part2 .settingwrapul .fail {
+  color: #fe161b;
+}
+.part2 .settingwrapul .fail .number {
+  background-color: #fe161b;
 }
 .erweimawrap {
   width: 144px;
@@ -248,6 +280,20 @@
 }
 .part3 {
   display: none;
+}
+.part3 .uploadmsg {
+  border: 1px solid #e2e2e2;
+  width: 500px;
+  margin: 20px auto 0 auto;
+}
+.part3 .uploadmsg li {
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  border-top: 1px solid #e2e2e2;
+}
+.part3 .uploadmsg li:first-child {
+  border-top: none;
 }
 .part4 {
   display: none;
