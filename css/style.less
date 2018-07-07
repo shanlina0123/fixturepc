@@ -169,8 +169,36 @@
         }
     }
 }
+/*小程序授权页面*/
+.powerwrap{
+    width: 700px;
+}
+.tabbtnwrap{
+    background-color: #e2e2e2;
+    border: 1px solid #e2e2e2;
+    li{
+        float: left;
+        width: 25%;
+        text-align: center;
+        &.on{
+            background-color: #fff;
+        }
+        >a{
+            display:block;
+            padding: 10px;
+            color: #333;
+            &:hover{
+                color: #333;
+            }
+        }
+    }
+}
+.tabcontentwrap{
+    border: 1px solid #e2e2e2;
+    border-top: none;
+    padding:10px 15px;
+}
 .bottomnotice{
-    margin-top: 20px;
     .warmnotice{
         font-size: 14px;
     }
@@ -181,6 +209,76 @@
    .noticeitem p{
        line-height: 25px;
    }
+}
+.bottombtn{
+    text-align: center;
+    padding: 25px 0 20px 0;
+    button{
+        margin-left: 0;
+    }
+    .spacibtn{
+        height: 30px!important;
+    }
+}
+.part2{
+    display: none;
+    .tips{
+        font-size: 16px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .backmessage{
+        height: 30px;
+        line-height: 30px;
+        margin: 10px auto;
+        font-size: 16px;
+        text-align: center;
+    }
+    .uploadmsg{
+        border: 1px solid #e2e2e2;
+        width: 500px;
+        margin: 20px auto 0 auto;
+        li{
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            border-top: 1px solid #e2e2e2;
+            &:first-child{
+                border-top: none;
+            }
+        }
+    }
+}
+.erweimawrap{
+    width: 144px;
+    padding: 10px;
+    margin: 20px auto;
+    box-shadow: 0 3px 20px #d2d2d2;
+    img{
+        width: 144px;
+        height: 144px;
+    }
+}
+.part3{
+    display: none;
+}
+.part4{
+    display: none;
+    .erweimawrapul{
+        text-align: center;
+        padding-top: 20px;
+        li{
+            display: inline-block;
+            text-align: center;
+            margin-left: 20px;
+            &:first-child{
+                margin-left: 0;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 /*抽奖预览页面*/
