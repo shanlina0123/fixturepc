@@ -118,8 +118,37 @@
             </div>
         </div>
     </div>
+    <!--分享功能-->
+    <div class="sharewrap" title="分享">
+        <img src="../../images/share.png">
+    </div>
+    <ul class="sharepop clearfix">
+        <li>
+            <p>公众号二维码</p>
+            <a href="javascript:;"><img src="../../images/erweima.png"></a>
+        </li>
+        <li>
+            <p>小程序码</p>
+            <a href="javascript:;"><img src="../../images/erweima.png"></a>
+        </li>
+    </ul>
 </body>
 <script type="text/javascript" src="../../layui/layui.js"></script>
 <script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    layui.use(['jquery', 'layer'], function() {
+        var $ = layui.jquery,
+            layer = layui.layer;
+        $(".sharewrap").click(function() {
+            layer.open({
+                type: 1,
+                closeBtn: 1,
+                title: false, //不显示标题
+                shadeClose: true,
+                content: $('.sharepop'), //捕获的元素，注意：最好该指定的元素要存放在body最外层，否则可能被其它的相对元素所影响
+            });
+        })
+    });
+</script>
 
 </html>

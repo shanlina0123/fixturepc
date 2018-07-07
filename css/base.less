@@ -154,5 +154,42 @@ a { text-decoration: none; color: #333; }
 .imgnotice{
     color: #c2c2c2
 }
-
-
+/*分享*/
+.sharewrap{
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    border-bottom: 80px solid transparent;
+    border-right: 80px solid #f0ad4e;
+    z-index: 2000;
+    cursor: pointer;
+    img{
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        left: 42px;
+    }
+}
+.sharepop{
+    display: none;
+    li{
+        float: left;
+        text-align: center;
+        padding: 20px;
+        p{
+            font-size: 14px;
+            height: 40px;
+            line-height: 40px;
+        }
+        a{
+            img{
+                width: 130px;
+                height: 130px;
+            }
+        }
+    }
+}
