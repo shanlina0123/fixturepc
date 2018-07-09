@@ -642,3 +642,29 @@
   line-height: 30px;
   padding: 0 10px;
 }
+/*手机端授权页面*/
+.phonepageWrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 15px 0 15px;
+  text-align: center;
+}
+.phonepageWrap p {
+  padding: 15px 0;
+  margin: 0;
+  font-size: 16px;
+}
+.phonepageWrap .powerbtnwrap button {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 38px;
+  text-align: center;
+  margin-top: 15px;
+  box-shadow: none;
+}
+.phonepageWrap .powerbtnwrap button:first-child {
+  background-color: #04BE02;
+  color: #fff;
+  border: 2px solid #04BE02;
+}

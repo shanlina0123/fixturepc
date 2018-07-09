@@ -245,13 +245,16 @@ a:focus {
   float: left;
   text-align: center;
   padding: 20px;
+  margin-left: 124px;
+}
+.sharepop li:first-child {
+  margin-left: 0;
 }
 .sharepop li p {
   font-size: 14px;
   height: 40px;
   line-height: 40px;
 }
-.sharepop li a img {
-  width: 130px;
-  height: 130px;
+.sharepop li a {
+  display: block;
 }
