@@ -10,13 +10,56 @@
 .centerBtnWrap {
   padding: 20px 0;
 }
-.notice {
-  font-size: 18px;
+.levelul {
+  margin-top: 30px;
 }
-.describe {
-  font-size: 16px;
+.levelul li {
+  float: left;
+  width: 360px;
   text-align: center;
-  padding-bottom: 10px;
+  padding: 20px;
+  margin-left: 90px;
+  box-shadow: 0px 0px 20px 2px rgba(74, 92, 130, 0.16);
+}
+.levelul li:first-child {
+  margin-left: 0;
+}
+.levelul li .toptext {
+  font-size: 22px;
+  color: #6F8E95;
+  line-height: 30px;
+}
+.levelul li .levelbtn {
+  display: block;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  color: #FFF;
+  border: 1px solid #6F8E95;
+  background-color: #6F8E95;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.levelul li .level2 {
+  color: #00C151;
+}
+.levelul li .level2btn {
+  background-color: #00C151;
+  border-color: #00C151;
+}
+.levelul li .lipswrap {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.levelul li .lipswrap .lip {
+  font-size: 14px;
+  line-height: 25px;
+  color: #A8ACB9;
+  padding-bottom: 5px;
+}
+.levelul li .lipswrap .lip:last-child {
+  padding-bottom: 0;
 }
 .hisMsgUl {
   margin: 20px 0;
@@ -221,6 +264,11 @@
   margin: 10px auto;
   font-size: 16px;
   text-align: center;
+}
+.part2 .backtext {
+  color: #fe161b;
+  text-align: center;
+  padding: 10px 0;
 }
 .part2 .settingwrap {
   width: 230px;
@@ -667,4 +715,13 @@
   background-color: #04BE02;
   color: #fff;
   border: 2px solid #04BE02;
+}
+@media (max-width: 1000px) {
+  .levelul li {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .levelul li:first-child {
+    margin-top: 0;
+  }
 }

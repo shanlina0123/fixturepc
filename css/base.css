@@ -258,3 +258,7 @@ a:focus {
 .sharepop li a {
   display: block;
 }
+.sharepop li a img {
+  width: 258px;
+  height: 258px;
+}
