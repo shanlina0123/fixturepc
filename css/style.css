@@ -15,7 +15,8 @@
 }
 .levelul li {
   float: left;
-  width: 360px;
+  width: 370px;
+  min-height: 706px;
   text-align: center;
   padding: 20px;
   margin-left: 90px;
@@ -60,6 +61,43 @@
 }
 .levelul li .lipswrap .lip:last-child {
   padding-bottom: 0;
+}
+.levelul li .lipswrap .lip p {
+  max-width: 90%;
+  text-align: left;
+}
+.levelul li .level3 {
+  color: #00B1B5;
+}
+.levelul li .level3btn {
+  background-color: #00B1B5;
+  border: none;
+}
+.levelul li .level3inner {
+  font-size: 14px;
+  color: #A8ACB9;
+}
+.levelul li .level3inner .level3left {
+  width: 36px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+.levelul li .level3inner .level3right {
+  border-left: 1px solid #A8ACB9;
+  padding-left: 14px;
+  margin-left: 10px;
+}
+.levelul li .level3inner .level3right p {
+  text-align: left;
+  font-size: 18px;
+  line-height: 25px;
+  color: #00B1B5;
+}
+.levelul li .level3inner .level3right span {
+  display: block;
+  text-align: left;
+  line-height: 22px;
 }
 .hisMsgUl {
   margin: 20px 0;
